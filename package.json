@@ -1,6 +1,6 @@
 {
   "name": "@studysync/eslint-plugin-jsx-conditionals",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Ensuring variables are cast to booleans whenever using `&&` conditionals in JSX to avoid unwanted side effects",
   "main": "index.js",
   "repository": {
