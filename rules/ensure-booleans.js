@@ -31,7 +31,9 @@ module.exports = {
             exp.left.type !== 'BinaryExpression' &&
             !(
               exp.left.type === 'CallExpression' &&
-              permissableFunctions.includes(exp.left.callee.name)
+              (permissableFunctions.includes(exp.left.callee.name) ||
+                (exp.left.callee.callee &&
+                  permissableFunctions.includes(exp.left.callee.callee.name)))
             )
           ) {
             context.report(

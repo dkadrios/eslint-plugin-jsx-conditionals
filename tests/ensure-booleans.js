@@ -33,6 +33,10 @@ ruleTester.run('Ensure Booleans in JSX Conditionals', rule, {
       parserOptions: { ecmaVersion: 6, ecmaFeatures: { jsx: true } },
     },
     {
+      code: `const Component = ({check}) => (<div>{equals(check)(value) && <p>Check</p>}</div>)`,
+      parserOptions: { ecmaVersion: 6, ecmaFeatures: { jsx: true } },
+    },
+    {
       code: `const Component = ({check}) => (<div>{not(check) ? <p>Check</p> : null}</div>)`,
       parserOptions: { ecmaVersion: 6, ecmaFeatures: { jsx: true } },
     },
